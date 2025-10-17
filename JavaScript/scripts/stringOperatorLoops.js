@@ -4,14 +4,24 @@ let sentence2 = "The family has 6 relatives living in the San Antonio area, and 
 let sentence3 = "This summer they plan on traveling to El Paso to visit as many family members as possible.";
 
 // === Extract numbers from sentence1 ===
-let nums1 = sentence1.match(/\d+/g).map(Number);
+let nums1Strings = sentence1.match(/\d+/g);
+let nums1 = [];
+for (let i = 0; i < nums1Strings.length; i++) {
+  nums1.push(Number(nums1Strings[i]));
+}
+
 let number5 = nums1[0]; // 5
 let number4 = nums1[1]; // 4
 let number1 = nums1[2]; // 1
 console.log("From sentence1:", number5, number4, number1);
 
 // === Extract numbers from sentence2 ===
-let nums2 = sentence2.match(/\d+/g).map(Number);
+let nums2Strings = sentence2.match(/\d+/g);
+let nums2 = [];
+for (let i = 0; i < nums2Strings.length; i++) {
+  nums2.push(Number(nums2Strings[i]));
+}
+
 let number6 = nums2[0]; // 6
 let number2 = nums2[1]; // 2
 let number100 = nums2[2]; // 100
