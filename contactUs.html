@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Baseball Central</title>
+
+    <!-- Linking main site stylesheet so the new page inherits the same theme -->
+    <link rel="stylesheet" href="CSS/styles.css" />
+
+    <!-- Linking JavaScript file that handles validation and price calculations -->
+    <script src="JavaScript/scripts/formValidation.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+      <p>
+        Use this form to reach us about baseball gear, training, or special
+        requests.
+      </p>
+      <!-- Primary site navigation (required to link contact page from index.html) -->
+      <nav aria-label="Main Navigation" role="navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="contactUs.html">Contact</a></li>
+          <li><a href="manipulatingDOM.html">Manipulating DOM</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--
+        CONTACT FORM
+        This form collects customer information and gear purchases.
+        The project requires specific input types including text fields,
+        radio buttons, checkboxes with unique prices, a dropdown list,
+        a textarea, and submit/reset buttons.
+    -->
+    <form id="contactForm">
+      <!-- Two REQUIRED text fields (validated through JavaScript) -->
+      <label for="fullName">Full Name:</label><br />
+      <input type="text" id="fullName" name="fullName" /><br /><br />
+
+      <label for="emailAddress">Email Address:</label><br />
+      <input type="text" id="emailAddress" name="emailAddress" /><br /><br />
+
+      <!-- Two radio buttons (user chooses preferred method of contact) -->
+      <p>Preferred Contact Method:</p>
+      <input
+        type="radio"
+        id="contactEmail"
+        name="contactMethod"
+        value="Email"
+      />
+      <label for="contactEmail">Email</label><br />
+
+      <input
+        type="radio"
+        id="contactPhone"
+        name="contactMethod"
+        value="Phone"
+      />
+      <label for="contactPhone">Phone</label><br /><br />
+
+      <!-- Three checkboxes with unique prices (required for Function 3 pricing logic) -->
+      <p>Select Baseball Gear to Purchase:</p>
+
+      <input type="checkbox" id="bat" name="gear" value="45" />
+      <label for="bat">Aluminum Bat – $45</label><br />
+
+      <input type="checkbox" id="glove" name="gear" value="30" />
+      <label for="glove">Fielding Glove – $30</label><br />
+
+      <input type="checkbox" id="cap" name="gear" value="15" />
+      <label for="cap">Team Baseball Cap – $15</label><br /><br />
+
+      <!-- Dropdown list (required by project) -->
+      <label for="referrer">How did you hear about us?</label><br />
+      <select id="referrer" name="referrer">
+        <option value="Google">Google</option>
+        <option value="Social Media">Social Media</option></select
+      ><br /><br />
+
+      <!-- Text area for additional user notes -->
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" cols="40"></textarea
+      ><br /><br />
+
+      <!-- Reset button clears the form; submit triggers the JavaScript validation -->
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
